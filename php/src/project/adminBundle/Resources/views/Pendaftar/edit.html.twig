@@ -1,0 +1,87 @@
+{% extends "adminBundle::layout.html.twig" %}
+
+{% block body %}
+<h2><b>Edit Data Pendaftar </b></h2>
+{{ form_start(editform) }}
+                {{ form_errors(editform) }}
+                    <table>
+                    <tr>
+                    <td>{{ form_label(editform.nama) }}</td>
+                    <td>{{ form_errors(editform.nama) }}</td>
+                    <td>{{ form_widget(editform.nama) }}</td>
+                    </tr>
+                    <tr>
+                   <td>{{ form_label(editform.JK) }}</td>
+                   <td> {{ form_errors(editform.JK) }}</td>
+                   <td>{{ form_widget(editform.JK) }} </td>  
+                   </tr>
+                   <tr>
+                   <td>{{ form_label(editform.tgl_lahir) }}</td>
+                   <td> {{ form_errors(editform.tgl_lahir) }}</td>
+                   <td> {{ form_widget(editform.tgl_lahir) }}</td>
+                    </tr>
+                    <tr>
+                   <td> {{ form_label(editform.Alamat) }}</td>
+                   <td> {{ form_errors(editform.Alamat) }}</td>
+                    <td>{{ form_widget(editform.Alamat) }}</td>
+                    </tr>
+                    <tr>
+                    <td>{{ form_label(editform.username) }}</td>
+                    <td>{{ form_errors(editform.username) }}</td>
+                    <td>{{ form_widget(editform.username) }}</td>
+                    </tr>
+                    <tr>
+                    <td>{{ form_label(editform.password) }}</td>
+                    <td>{{ form_errors(editform.password) }}</td>
+                    <td>{{ form_widget(editform.password) }}</td> 
+                    </tr>
+                    
+                    <tr>
+                    <td>{{ form_label(editform.email) }}</td>
+                    <td>{{ form_errors(editform.email) }}</td>
+                    <td>{{ form_widget(editform.email) }}</td> 
+                    </tr>
+                    <tr>
+                    <td>{{ form_label(editform.Telepon) }}</td>
+                    <td>{{ form_errors(editform.Telepon) }}</td>
+                    <td>{{ form_widget(editform.Telepon) }}</td> 
+                    </tr>
+                    <tr>
+                    <td>{{ form_label(editform.Agama) }}</td>
+                    <td>{{ form_errors(editform.Agama) }}</td>
+                    <td>{{ form_widget(editform.Agama) }}</td> 
+                    </tr>
+                     <tr>
+                    <td>{{ form_label(editform.warganegara) }}</td>
+                    <td>{{ form_errors(editform.warganegara) }}</td>
+                    <td>{{ form_widget(editform.warganegara) }}</td> 
+                    </tr>
+                    <tr>
+                    <td>{{ form_label(editform.Sekolah) }}</td>
+                    <td>{{ form_errors(editform.Sekolah) }}</td>
+                    <td>{{ form_widget(editform.Sekolah) }}</td> 
+                    </tr>
+                    <tr>
+                    <td>{{ form_label(editform.tingkat_pendidikan) }}</td>
+                    <td>{{ form_errors(editform.tingkat_pendidikan) }}</td>
+                    <td>{{ form_widget(editform.tingkat_pendidikan) }}</td> 
+                    </tr>
+                    <tr>
+                    <td>{{ form_label(editform.Pembayaran) }}</td>
+                    <td>{{ form_errors(editform.Pembayaran) }}</td>
+                    <td>{{ form_widget(editform.Pembayaran) }}</td> 
+                    </tr>
+                    <tr>
+                    <td>{{ form_label(editform.Tgl_Pembayaran) }}</td>
+                    <td>{{ form_errors(editform.Tgl_Pembayaran) }}</td>
+                    <td>{{ form_widget(editform.Tgl_Pembayaran) }}</td> 
+                    </tr>
+                       
+                    <tr>        
+                   <td> {{ form_widget(editform.save) }}</td>
+                    </tr>
+                    </table>        
+            {{ form_widget(editform._token) }}
+ {{ form_end(editform) }}
+
+{% endblock %}

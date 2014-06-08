@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>AFTER SCHOOL</title>
+<link rel="stylesheet" href="{{ asset('bundles/home/css/layout.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/home/css/menubar.css') }}" />
+<style type="text/css">
+  body{padding:20px; font-size:14px; color:#000000; font-family:Arial, Helvetica, sans-serif;}
+  h2 {font-weight:bold; color:#000099; margin: 20px 0px 10px 0; font-size: 1.5em;}
+  p span {color:#006600; font-weight:bold; }
+  a, a:link, a:visited {color:#0000FF;}
+  textarea {width: 100%; padding: 10px; margin: 10px 0 15px 0; font-size: 13px; font-family: Consolas,monospace;}
+  textarea.html {height: 300px;}
+  textarea.css {height: 50px;}
+  p {margin: 0 0 10px 0; line-height: 1.5; font-size: 1em;}
+  code, pre {font-family: Consolas,monospace; color: green;}
+  ol li {margin: 0 0 15px 0;}
+  .thirds {width: 30%; margin: 0 5% 0 0; float: left;}
+  .thirds.last {margin-right: 0; float: left;}
+  .thirds textarea {height: 50px; font-size: .9em;}
+</style>
+
+</head>
+<body>
+<div id="container">
+    <div id="header" bgcolor="gray"> 
+      <img src="{{ asset('bundles/home/images/header.jpg')}}">
+      <p align="right"><a href={{path('register')}} > Login | Daftar </a>  </p>
+    </div>
+    
+    
+<div id="sidebar_kiri" align="center">
+<div id='cssmenu'> 
+		<a href={{path('home')}}><span>Home</span></a> 
+		<a href={{path('profil')}}><span>Profil</span></a>
+		<a href={{path('news')}}><span>Fresh News</span></a>
+		<a href={{path('contact')}}><span>Contact</span></a></div>
+    </div>
+    
+	<div id="center">
+	<table width="702" height="552" border="0">
+      <tr valign="top">
+	 <td> <img src="otak.jpg" align='left'> </td>
+	  <td><h3> PERBEDAAN OTAK KANAN DAN OTAK KIRI</h3> <br>
+	  <p> Perbedaan dua fungsi otak sebelah kiri dan kanan akan membentuk sifat, 
+	  karakteristik dan kemampuan yang berbeda pada seseorang </p> <br>
+	   <a href='news1.html.twig'> baca selanjutnya </a> 
+       </td>
+	   </tr>
+	  
+      <tr valign="top">
+      <td> <img src="ingat.jpg" align='left'> </td>
+	  <td><h3> 6 Cara Meningkatkan Daya Ingat Anda</h3> <br>
+	  <p>Ada berbagai cara untuk meningkatkan daya ingat. Ingatan kita layaknya organ tubuh yang lain yang membutuhkan latihan teratur agar 			</p> <br>
+	   <a href='news2.html.twig'> baca selanjutnya </a> </h3>
+      </td> </tr>
+	  </table>
+	  </div>
+	  
+     <div id="footer">
+     	  <div align="center"> <img src="{{ asset('bundles/home/images/footer.jpg') }}">
+         </div>
+         
+         <div align="center">
+           <div id="div">
+             <div align="center">
+               <div align="center">&copy; copyright AFTER SCHOOL.com - PUSAT BIMBINGAN BELAJAR INDONESIA </div>
+             </div>
+           </div>
+      
+     </body>
+</html>

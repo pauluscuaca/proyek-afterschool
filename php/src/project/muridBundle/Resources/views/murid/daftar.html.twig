@@ -1,0 +1,46 @@
+{% block content %}
+{{ form_start(form) }}
+                {{ form_errors(form) }}
+
+            
+                    {{ form_label(form.nama) }}
+                    {{ form_errors(form.nama) }}
+                    {{ form_widget(form.nama) }}
+                        
+                    {{ form_label(form.JK) }}
+                    {{ form_errors(form.JK) }}
+                    {{ form_widget(form.JK) }}   
+                   
+                    {{ form_label(form.tgl_lahir) }}
+                    {{ form_errors(form.tgl_lahir) }}
+                    {{ form_widget(form.tgl_lahir) }}
+
+                    {{ form_label(form.Alamat) }}
+                    {{ form_errors(form.Alamat) }}
+                    {{ form_widget(form.Alamat) }}
+              
+                    {{ form_label(form.username) }}
+                    {{ form_errors(form.username) }}
+                    {{ form_widget(form.username) }}
+
+                    {{ form_errors(form.password) }}
+                    {{ form_widget(form.password) }}          
+            
+                    {{ form_label(form.email) }}
+                    {{ form_errors(form.email) }}
+                    {{ form_widget(form.email) }}
+
+                    {{ form_label(form.tingkat) }}
+                    {{ form_errors(form.tingkat) }}
+                    {{ form_widget(form.tingkat) }}
+
+                    {{ form_label(form.namasekolah) }}
+                    {{ form_errors(form.namasekolah) }}
+                    {{ form_widget(form.namasekolah) }}
+
+                    {{ form_widget(form.save) }}
+                
+            {{ form_widget(form._token) }}
+ {{ form_end(form) }}
+
+{% endblock %}

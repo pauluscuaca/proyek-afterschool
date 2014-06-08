@@ -1,0 +1,19 @@
+{% extends "adminBundle::layout.html.twig" %}
+
+{% block body %}
+{{ form_start(editform) }}
+                {{ form_errors(editform) }}
+
+            
+                    {{ form_label(editform.ruang) }}
+                    {{ form_errors(editform.ruang) }}
+                    {{ form_widget(editform.ruang) }}      
+                
+             {{ form_widget(editform.save) }}
+                
+            {{ form_widget(editform._token) }}
+
+ {{ form_end(editform) }}
+    
+
+{% endblock %}

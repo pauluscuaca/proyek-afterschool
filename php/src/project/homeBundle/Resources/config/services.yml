@@ -1,0 +1,7 @@
+parameters:
+    project_home_userprovider.class: project\homeBundle\Security\Core\User\FOSUBUserProvider
+
+services:
+    project_home_userprovider:
+        class: %project_home_userprovider.class%
+        arguments: [@fos_user.user_manager, {facebook: facebookId}]

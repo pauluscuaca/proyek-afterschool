@@ -1,0 +1,79 @@
+admin_homepage:
+    pattern:  /
+    defaults: { _controller: adminBundle:admin:admin }
+
+admin:
+    pattern:  /admin
+    defaults: { _controller: adminBundle:admin:admin }
+
+data_admin:
+    pattern: /dataadmin
+    defaults: { _controller: adminBundle:admin:dataadmin }
+
+reg_admin:
+    pattern: /regadmin
+    defaults: { _controller: adminBundle:admin:regadmin }
+
+delete_admin:
+    pattern: /delete
+    defaults: { _controller: adminBundle:admin:deleteAdmin }
+
+edit_admin:
+    pattern: /edit
+    defaults: { _controller: adminBundle:admin:editAdmin }
+
+data_pendaftar:
+    pattern: /datapendaftar
+    defaults: { _controller: adminBundle:Pendaftar:datapendaftar }
+
+delete_pendaftar:
+    pattern: /delete_pendaftar
+    defaults: { _controller: adminBundle:Pendaftar:deletePendaftar}
+
+edit_pendaftar:
+    pattern: /edit_pendaftar
+    defaults: { _controller: adminBundle:Pendaftar:editPendaftar}
+
+data_murid:
+    pattern: /datamurid
+    defaults: { _controller: adminBundle:murid:dataMurid}
+
+delete_murid:
+    pattern: /delete_murid
+    defaults: { _controller: adminBundle:murid:deleteMurid}
+
+edit_murid:
+    pattern: /edit_murid
+    defaults: { _controller: adminBundle:murid:editMurid}
+
+data_pelajaran:
+    pattern: /datapelajaran
+    defaults: {_controller: adminBundle:Pelajaran:dataPelajaran}
+
+tambah_pelajaran:
+    pattern: /tambahpelajaran
+    defaults: { _controller: adminBundle:Pelajaran:tambahPelajaran }
+
+delete_pelajaran:
+    pattern: /deletepelajaran
+    defaults: { _controller: adminBundle:Pelajaran:deletePelajaran }
+
+edit_pelajaran:
+    pattern: /editpelajaran
+    defaults: { _controller: adminBundle:Pelajaran:editPelajaran }
+
+data_kelas:
+    pattern: /datakelas
+    defaults: {_controller: adminBundle:Kelas:dataKelas}
+
+tambah_kelas:
+    pattern: /tambahkelas
+    defaults: { _controller: adminBundle:Kelas:tambahKelas }
+
+delete_kelas:
+    pattern: /deletekelas
+    defaults: { _controller: adminBundle:Kelas:deleteKelas }
+
+edit_kelas:
+    pattern: /editkelas
+    defaults: { _controller: adminBundle:Kelas:editKelas }

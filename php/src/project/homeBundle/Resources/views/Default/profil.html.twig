@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>AFTER SCHOOL</title>
+<link rel="stylesheet" href="{{ asset('bundles/home/css/layout.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/home/css/menubar.css') }}" />
+<style type="text/css">
+  body{padding:20px; font-size:14px; color:#000000; font-family:Arial, Helvetica, sans-serif;}
+  h2 {font-weight:bold; color:#000099; margin: 20px 0px 10px 0; font-size: 1.5em;}
+  p span {color:#006600; font-weight:bold; }
+  a, a:link, a:visited {color:#0000FF;}
+  textarea {width: 100%; padding: 10px; margin: 10px 0 15px 0; font-size: 13px; font-family: Consolas,monospace;}
+  textarea.html {height: 300px;}
+  textarea.css {height: 50px;}
+  p {margin: 0 0 10px 0; line-height: 1.5; font-size: 1em;}
+  code, pre {font-family: Consolas,monospace; color: green;}
+  ol li {margin: 0 0 15px 0;}
+
+  .thirds {width: 30%; margin: 0 5% 0 0; float: left;}
+  .thirds.last {margin-right: 0; float: left;}
+  .thirds textarea {height: 50px; font-size: .9em;}
+</style>
+
+</head>
+<body>
+<div id="container">
+    <div id="header" bgcolor="gray"> 
+      <img src="{{ asset('bundles/home/images/header.jpg')}}">
+      <p align="right"><a href={{path('register')}} > Login | Daftar </a>  </p>
+    </div>
+	<div id="sidebar_kiri" align="center">
+	
+	<div id='cssmenu'> 
+		<a href={{path('home')}}><span>Home</span></a> 
+		<a href={{path('profil')}}><span>Profil</span></a>
+		<a href={{path('news')}}><span>Fresh News</span></a>
+		<a href={{path('contact')}}><span>Contact</span></a></div>
+    </div>
+    
+    <div id="center">
+<p align="justify">   
+After School Merupakan sebuah bimbingan belajar yang sedang berkembang di kota Medan, 
+didirikan pada tgl 15 juli 2013 oleh Fera dan Denny, saat ini bimbingan ini sudah mempunyai siswa sekitar 200 Orang,
+dan memiliki 1 Outlet, Dengan motto <b> Your Next stop for fun & learning </b> , After School menghadirkan kesungguhan 
+pendampingan belajar melalui program Learning Concept yang memadukan antara pengalaman, perhatian dan sistem belajar
+yang terstruktur.</p> <br>   
+
+<h2> Visi </h2> 
+<p> Menjadi salah satu bimbingan belajar yang memberikan edukasi lengkap bagi siswa-siswi terutama bidang 
+pelajaran sekolah  </p> <br>
+
+<h2> Misi </h2>  
+<p> Mendidik siswa-siswi sebaik mungkin agar dapat meraih prestasi baik didalam maupun diluar sekolah </p> <br>
+
+<h2> motto </h2> 
+<p>Your Next stop for fun & learning </p>
+    </div>
+   
+    <div id="footer">
+	  <div align="center"> <img src="{{ asset('bundles/home/images/footer.jpg') }}">
+    </div>
+    
+    <div align="center">
+      <div id="div">
+        <div align="center">
+          <div align="center">&copy; copyright AFTER SCHOOL.com - PUSAT BIMBINGAN BELAJAR INDONESIA </div>
+        </div>
+      </div>
+ 
+</body>
+</html>

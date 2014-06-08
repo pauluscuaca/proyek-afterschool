@@ -1,0 +1,51 @@
+{% extends "adminBundle::layout.html.twig" %}
+
+{% block body %}
+<h2><b>Data Murid </b></h2>
+<button><a href={{path('reg_admin')}} class="button">Create Account</a></button>
+<br>
+ <div class="table">
+<table class="listing" border=1 cellpadding=0 cellspacing=1>
+
+		<tr>
+			<th class="first" width="177">No</th>
+			<th>nama</th>
+			<th>JK</th>
+			<th>Telepon</th>
+			<th>tgl_lahir</th>
+			<th>Alamat</th>
+			<th>Email</th>
+			<th>Agama</th>
+			<th>negara</th>
+			<th>Sekolah</th>
+			<th>Kelas</th>
+			<th>Tgl Bayar</th>
+			<th colspan="2" class="last"> Action </th>
+		</tr>
+		 {% for mrd in datamurid %}
+		 	<tr>
+
+               <td>{{mrd.id}}</td>
+               {% set a=mrd.DataPendaftaran.agama %}
+               <td>{{mrd.DataPendaftaran.UserPendaftar.nama}}</td>
+               <td>{{mrd.DataPendaftaran.UserPendaftar.JK}}</td>
+               <td>{{mrd.DataPendaftaran.UserPendaftar.Telepon}}</td>  
+               <td>{{mrd.DataPendaftaran.UserPendaftar.TglLahir|date('Y-m-d')}}</td>   
+			   <td>{{mrd.DataPendaftaran.UserPendaftar.Alamat}}</td>   
+               <td>{{mrd.DataPendaftaran.UserPendaftar.Email}}</td>
+               <td>{{a}}</td>   
+			   <td>{{mrd.DataPendaftaran.Warganegara}}</td>   
+			   <td>{{mrd.DataPendaftaran.sekolah}}</td>   
+               <td>{{mrd.DataPendaftaran.tingkatpendidikan}}</td>                                         
+               <td>{{mrd.DataPendaftaran.TglPembayaran|date('Y-m-d')}}</td>   
+               <td><a href="{{path('edit_murid',{'id_user': mrd.DataPendaftaran.UserPendaftar.Id,'no_induk': mrd.DataPendaftaran.id})}}"><img src="{{ asset('bundles/admin/images/edit.png') }}"></a></td>  
+			   <td><a href="{{path('delete_murid',{'id_user': mrd.DataPendaftaran.UserPendaftar.Id,'id_pendaftaran': mrd.DataPendaftaran.id, 'no_induk': mrd.id})}}"><img src="{{ asset('bundles/admin/images/delete.png') }}">
+               </a></td>
+
+			   
+       		   
+               
+       		</tr>
+       	 {% endfor %}
+	</table>
+{% endblock %}

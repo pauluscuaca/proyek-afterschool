@@ -1,0 +1,88 @@
+{% extends 'AcmeDemoBundle::layout.html.twig' %}
+
+
+<html>
+<!-- <head> -->
+<!-- <title>AFTER SCHOOL</title>
+<link rel="stylesheet" href="{{ asset('bundles/home/css/layout.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/home/css/menubar.css') }}" />
+<style type="text/css">
+  body{padding:20px; font-size:14px; color:#000000; font-family:Arial, Helvetica, sans-serif;}
+  h2 {font-weight:bold; color:#000099; margin: 20px 0px 10px 0; font-size: 1.5em;}
+  p span {color:#006600; font-weight:bold; }
+  a, a:link, a:visited {color:#0000FF;}
+  textarea {width: 100%; padding: 10px; margin: 10px 0 15px 0; font-size: 13px; font-family: Consolas,monospace;}
+  textarea.html {height: 300px;}
+  textarea.css {height: 50px;}
+  p {margin: 0 0 10px 0; line-height: 1.5; font-size: 1em;}
+  code, pre {font-family: Consolas,monospace; color: green;}
+  ol li {margin: 0 0 15px 0;}
+
+  .thirds {width: 30%; margin: 0 5% 0 0; float: left;}
+  .thirds.last {margin-right: 0; float: left;}
+  .thirds textarea {height: 50px; font-size: .9em;}
+</style>
+
+</head>
+
+<div id="container">
+    <div id="header" bgcolor="gray"> 
+      <img src="{{ asset('bundles/home/images/header.jpg') }}">
+      <p align="right"> Username <input type="text" name="username" >
+  			Password <input type="text" name="full_name3" >
+    			<input type="submit" name="submit" value="Login">  </p>
+    	</div>		
+    <div id="sidebar_kiri" align="center">
+    <div id='cssmenu'> 
+	<a href={{path('home')}}><span>Home</span></a> 
+	<a href={{path('profil')}}><span>Profil</span></a>
+	<a href={{path('news')}}><span>Fresh News</span></a>
+	<a href={{path('contact')}}><span>Contact</span></a></div>
+</div> -->
+<body>
+  {% block body%}
+    <div id="center">
+	<h2> <center> Contact Support </center> </h2> <br> <br> 
+	<center> jika anda memiliki saran,komplain, dan sebagainya silahkan hubungi kami melalui form dibawah ini : </center> <br>
+	<table width="578" height="419" border>
+	<tr>
+	<td width="200">Nama anda</td>
+	<td><input type="text" name="nama" ></td>
+	</tr>
+	<tr>
+	<td>Email anda</td>
+	<td><input type="text" name="email" ></td>
+	</tr>
+	<tr>
+	<td>Judul Pesan anda</td>
+	<td><input type="text" name="judul" ></td>
+	</tr>
+	<tr>
+	<td>Isi Pesan anda</td>
+	<td><textarea name="pesan" cols="25" rows="10"></textarea></td>
+	</tr>
+	<tr>
+
+       <td colspan=2 align="center"><input type="submit" name="submit" value="kirim">
+
+           <input type="reset" name="reset" value="hapus"></td>
+
+</tr>
+
+</table>
+	
+    </div>
+   
+    <div id="footer">
+         	  <div align="center"> <img src="{{ asset('bundles/home/images/footer.jpg') }}">
+             </div>
+             
+             <div align="center">
+               <div id="div">
+                 <div align="center">
+                   <div align="center">&copy; copyright AFTER SCHOOL.com - PUSAT BIMBINGAN BELAJAR INDONESIA </div>
+                 </div>
+               </div>
+          {%endblock%}
+         </body>
+</html>

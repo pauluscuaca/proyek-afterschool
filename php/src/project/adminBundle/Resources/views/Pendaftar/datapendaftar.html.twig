@@ -1,0 +1,51 @@
+{% extends "adminBundle::layout.html.twig" %}
+
+{% block body %}
+<div class="table">
+<h2><b>Data Pendaftar </b></h2>
+<table class="listing" border=1 cellpadding=0 cellspacing=0 >
+
+		<tr>
+			<th class="first" width="177">No </th>
+			<th>nama</th>
+			<th>JK</th>
+			<th>Telepon</th>
+			<th>tgl_lahir</th>
+			<th>Alamat</th>
+			<th>Agama</th>
+			<th>Warganegara</th>
+			<th>Sekolah</th>
+			<th>Kelas</th>
+			<th>Pembayaran</th>
+			<th>Tgl Bayar</th>
+			<th colspan="2" class="last"> Action </th>
+		</tr>
+		 {% for pndftr in pendaftar %}
+		 	{%  if pndftr != NULL %}
+		 		{% if pndftr.Pembayaran =='Belum Lunas' %}
+					 	
+					 	<tr>
+			               <td>{{pndftr.id}}</td>
+			               {% set a=pndftr.agama %}
+							
+			               <td>{{pndftr.UserPendaftar.nama}}</td>
+			               <td>{{pndftr.UserPendaftar.JK}}</td>
+			               <td>{{pndftr.UserPendaftar.Telepon}}</td>
+			               <td>{{pndftr.UserPendaftar.TglLahir|date('Y-m-d')}}</td>  
+			               <td>{{pndftr.UserPendaftar.Alamat}}</td>   
+			               <td>{{pndftr.agama}}</td>
+			               <td>{{pndftr.warganegara}}</td>
+			               <td>{{pndftr.sekolah}}</td>
+			               <td>{{pndftr.tingkatpendidikan}}</td>  
+			               <td>{{pndftr.Pembayaran}}</td>   
+			               <td>{{pndftr.TglPembayaran|date('Y-m-d')}}</td>   
+			               <td><a href="{{path('edit_pendaftar',{'id_pndftr': pndftr.UserPendaftar.Id,'id_dftr': pndftr.id})}}"><img src="{{ asset('bundles/admin/images/edit.png') }}"></a></td>
+			               <td><a href="{{path('delete_pendaftar',{'id_pndftr': pndftr.UserPendaftar.Id})}}"><img src="{{ asset('bundles/admin/images/delete.png')}}"></a></td>
+						   
+			       		</tr>
+
+       			{% endif %}
+       		{% endif %}
+       	 {% endfor %}
+	</table>
+{% endblock %}

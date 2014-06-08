@@ -1,0 +1,101 @@
+<html>
+<head>
+{%block head%}
+<link rel="stylesheet" href="{{ asset('bundles/home/css/layout.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/home/css/coin-slider.css') }}" />
+
+<script type="text/javascript" src="{{ asset('bundles/home/js/jquery-1.4.2.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('bundles/home/js/script.js')}}"></script>
+<script type="text/javascript" src="{{ asset('bundles/home/js/coin-slider.min.js')}}"></script>
+{%endblock%}
+
+
+</head>
+<body>
+  <div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">After SCHOOL</a></h1>
+      <h2><font size="3" color="orange">Kursus Bimbingan Belajar</font></h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href={{path('home')}}> Home </a></li>
+        <li><a href={{path('about')}}> About us </a></li>
+        <li><a href={{path('program')}}>Program</a></li>
+        <li><a href={{path('article')}}>Article</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+<div id="container" class="clear">
+
+  <div class="clr"></div>
+      <div class="slider">
+        <div id="coin-slider"> 
+         <a href="#"><img src="{{ asset('bundles/home/images/slide1.jpg') }}"> </a>
+         <a href="#"><img src="{{ asset('bundles/home/images/slide2.jpg') }}"> </a>
+         <a href="#"><img src="{{ asset('bundles/home/images/slide3.jpg') }}"> </a>
+         
+       </div>
+        <div class="clr"></div>
+        
+    <aside id="left_column">
+      <h2 class="title"> USER LOGIN </h2>
+      <nav>
+   {% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+{% if error %}
+    <div>{{ error|trans }}</div>
+{% endif %}
+
+
+   <form action="{{ path("fos_user_security_check") }}" method="post">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+
+
+    <fieldset id="inputs">
+    <label for="username">{{ 'security.login.username'|trans }}</label>
+    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+
+    <label for="password">{{ 'security.login.password'|trans }}</label>
+    <input type="password" id="password" name="_password" required="required" />
+
+    </fieldset>
+    <fieldset id="actions">
+        <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" /> 
+        <a href="">Forgot your password?</a><a href={{path('daftar')}}>Register</a>
+    </fieldset>
+</form>
+{% endblock fos_user_content %}
+
+
+      </nav>
+
+        </nav>
+      <!-- /nav -->
+      <h2 class="title">Get In Contact</h2>
+      <section class="last">
+        <address>
+        <b>After School</b><br>
+        Jl.Komplek MMTC pancing no 9<br>
+        Medan<br>
+        20112<br>
+        <br>
+        Tel: 0813 6171 1498<br>
+        Email: <a href="#">Afterschool.com</a>
+        </address>
+      </section>
+      <!-- /section -->
+    </aside>
+    {% block body%}
+    {% endblock %}
+</body> 
+
+</html>
+

@@ -1,0 +1,39 @@
+
+{%extends "homeBundle::layout.html.twig"%}
+
+{% block body %}
+    <!-- main content -->
+    <div id="content"><br>
+     <font size="4" color="orange"> Article </font>
+     <br>
+  <table width="702" height="552" border="0">
+      <tr valign="top">
+   <td> <img src="{{ asset('bundles/home/images/otak.jpg') }}"> </td>
+    <td><h3> PERBEDAAN OTAK KANAN DAN OTAK KIRI</h3> <br>
+    <p> Perbedaan dua fungsi otak sebelah kiri dan kanan akan membentuk sifat, 
+    karakteristik dan kemampuan yang berbeda pada seseorang.... </p> <br>
+     <a href={{path('article1')}}> baca selanjutnya </a> 
+       </td>
+     </tr>
+    
+      <tr valign="top">
+      <td> <img src="{{ asset('bundles/home/images/ingat.jpg') }}"> </td>
+    <td><h3> 5 Cara Meningkatkan Daya Ingat Anda</h3> <br>
+    <p>Ada berbagai cara untuk meningkatkan daya ingat. Ingatan kita layaknya organ tubuh yang lain yang membutuhkan latihan teratur agar....</p> <br>
+     <a href={{path('article2')}}> baca selanjutnya </a> 
+      </td> </tr>
+    </table>
+    
+   
+    </div>
+    
+  </div>
+</div>
+<!-- footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">After SCHOOL</a></p>
+    
+  </footer>
+</div>
+{% endblock %}

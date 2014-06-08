@@ -1,0 +1,38 @@
+home_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: homeBundle:Default:index }
+
+home:
+    pattern: /home
+    defaults: { _controller: homeBundle:Security:login }
+
+about:
+    pattern: /about
+    defaults: { _controller: homeBundle:home:about }
+
+program:
+    pattern: /program
+    defaults: { _controller: homeBundle:home:program }
+
+article:
+    pattern: /article
+    defaults: { _controller: homeBundle:home:article}
+
+article1:
+    pattern: /article1
+    defaults: { _controller: homeBundle:home:article1}
+
+article2:
+    pattern: /article2
+    defaults: { _controller: homeBundle:home:article2}
+
+login:
+    pattern: /home/login
+    defaults: { _controller: homeBundle:home:login }
+daftar:
+    pattern: /daftar
+    defaults: { _controller: homeBundle:home:regpendaftar }
+
+security:
+    pattern: /security
+    defaults: { _controller: homeBundle:Security:ren }

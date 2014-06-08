@@ -1,0 +1,60 @@
+{% extends "adminBundle::layout.html.twig" %}
+
+{% block body %}
+<h2><b>Buat Admin Baru </b></h2>
+<form action="{{ path('reg_admin') }}" method="POST">
+{{ form_errors(form) }}
+    <table>
+       <tr>
+                    <td>{{ form_label(form.nama) }}</td>
+                    <td>{{ form_errors(form.nama) }}</td>
+                    <td>{{ form_widget(form.nama) }}</td>
+                    </tr>
+
+                    <tr>
+                    <td>{{ form_label(form.JK) }}</td>
+                    <td>{{ form_errors(form.JK) }}</td>
+                    <td>{{ form_widget(form.JK) }} </td>  
+                    </tr>
+                    <tr>
+                    <td>{{ form_label(form.Telepon) }}</td>
+                    <td>{{ form_errors(form.Telepon) }}</td>
+                    <td>{{ form_widget(form.Telepon) }}</td>          
+                    </tr>
+                    <tr>
+                    <td>{{ form_label(form.tgl_lahir) }}</td>
+                    <td>{{ form_errors(form.tgl_lahir) }}</td>
+                    <td>{{ form_widget(form.tgl_lahir) }}</td>
+                    </tr>
+                    <tr>
+                    <td>{{ form_label(form.Alamat) }}</td>
+                    <td>{{ form_errors(form.Alamat) }}</td>
+                    <td>{{ form_widget(form.Alamat) }}</td>
+                    </tr>
+                    <tr>
+                    <td>{{ form_label(form.email) }}</td>
+                    <td>{{ form_errors(form.email) }}</td>
+                    <td>{{ form_widget(form.email) }}</td>          
+                    </tr>
+                    <tr>
+                    <td>{{ form_label(form.password) }}</td>
+                    <td>{{ form_errors(form.password) }}</td>
+                    <td>{{ form_widget(form.password) }}</td>          
+                    </tr>
+                    <tr>
+                    <td>{{ form_rest(form) }}</td>
+                    </tr>
+                    <tr>
+                    <td><input type="submit" value="Create" onclick="alert('Data berhasil disimpan!');" /> 
+                        <script type="text/javascript">
+                        function alertTest() 
+                        {  alert("Data tidak berhasil disimpan");  }
+                        </script>
+
+                        <input type="button" value="cancel" onclick="alertTest();" /> </td>
+                    </tr>
+                    </table>
+    </form>
+    
+
+{% endblock %}

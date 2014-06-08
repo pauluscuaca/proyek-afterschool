@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>AFTER SCHOOL</title>
+<link rel="stylesheet" href="{{ asset('bundles/home/css/layout.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/home/css/menubar.css') }}" />
+<style type="text/css">
+  body{padding:20px; font-size:14px; color:#000000; font-family:Arial, Helvetica, sans-serif;}
+  h2 {font-weight:bold; color:#000099; margin: 20px 0px 10px 0; font-size: 1.5em;}
+  p span {color:#006600; font-weight:bold; }
+  a, a:link, a:visited {color:#0000FF;}
+  textarea {width: 100%; padding: 10px; margin: 10px 0 15px 0; font-size: 13px; font-family: Consolas,monospace;}
+  textarea.html {height: 300px;}
+  textarea.css {height: 50px;}
+  p {margin: 0 0 10px 0; line-height: 1.5; font-size: 1em;}
+  code, pre {font-family: Consolas,monospace; color: green;}
+  ol li {margin: 0 0 15px 0;}
+
+  .thirds {width: 30%; margin: 0 5% 0 0; float: left;}
+  .thirds.last {margin-right: 0; float: left;}
+  .thirds textarea {height: 50px; font-size: .9em;}
+</style>
+
+</head>
+
+<body>
+<div id="container">
+    <div id="header" bgcolor="gray"> 
+      <img src="{{ asset('bundles/home/images/header.jpg') }}">
+      <p align="right"> Username <input type="text" name="username" >
+  			Password <input type="text" name="full_name3" >
+    			<input type="submit" name="submit" value="Login">  </p>
+</div>
+	
+	<div id="sidebar_kiri" align="center">
+	
+	<div id='cssmenu'> 
+			<a href={{path('home')}}><span>Home</span></a> 
+			<a href={{path('profil')}}><span>Profil</span></a>
+			<a href={{path('news')}}><span>Fresh News</span></a>
+			<a href={{path('contact')}}><span>Contact</span></a> </div>
+	</div>
+	
+	
+    <div id="center">
+	<form name="biodata" method="post" action="inisialisasi2.html">
+	<table width="578" height="419" border>
+	<tr>
+		<td width="239">Full Name</td>
+		<td width="323"><input type="text" name="full_name" ></td>
+	</tr>
+	<tr>
+		<td>Password</td>
+		<td><input type="password" name="password" ></td>
+	</tr>
+	<tr>
+		<td>Re-type Password</td>
+		<td><input type="password" name="re_password" ></td>	
+	</tr>
+	<tr>
+		<td>E-mail</td>
+		<td><input type="text" name="e_mail" size="40"></td>
+	</tr>
+	<tr>
+		<td>Telepon / HP</td>
+		<td><Input type="text" name="Telepon/HP",size="20"></td>
+	</tr>
+	<tr>
+		<td>NIM</td>
+		<td><Input type="text" name="NIM",size="50"></td>
+	</tr>
+	<tr>
+		<td>Alamat</td>
+		<td><Input type="text" name="alamat",size="50"></td>
+	</tr>
+	<tr>
+		<td>Nama Sekoleh</td>
+		<td><Input type="text" name="nama_sekolah",size="20"></td>
+	</tr>
+	<tr>
+		<td>kelas</td>
+		<td><select name="kelas">
+		<option>&nbsp</option>
+		<option>SD</option>
+	   		<option>SMP 1</option>
+	   		<option>SMP 2</option>
+	   		<option>SMP 3</option>
+	   			<option>SMA 1</option>
+	   			<option>SMA 2 IPA</option>
+	   			<option>SMA 2 IPS</option>
+	   			<option>SMA 3 IPA</option>
+	   			<option>SMA 3 IPS</option>
+	   	</select> </td>
+	</tr>
+	<tr>
+		<td>Jenis kelamin</td>
+		<td><input type="radio" name="jenis_kelamin" value="pria">pria
+		    <input type="radio" name="jenis_kelamin" value="wanita">wanita</td>
+	</tr>
+	<tr>
+	<td colspan=2 align=center><input type="submit" name="submit" value="kirim">
+        <input type="reset" name="reset" value="reset"></td>
+	</tr>
+</table>
+</form>
+    </div>
+   
+     <div id="footer">
+    	  <div align="center"> <img src="{{ asset('bundles/home/images/footer.jpg') }}">
+        </div>
+        
+        <div align="center">
+          <div id="div">
+            <div align="center">
+              <div align="center">&copy; copyright AFTER SCHOOL.com - PUSAT BIMBINGAN BELAJAR INDONESIA </div>
+            </div>
+          </div>
+     
+    </body>
+</html>

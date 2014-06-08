@@ -1,0 +1,27 @@
+{% extends "adminBundle::layout.html.twig" %}
+
+{% block head %}
+ <link rel="stylesheet" href="{{ asset('bundles/admin/css/admin.css') }}">
+ {% endblock %}
+{% block body %}
+<table class="test" border=1 cellpadding=0 cellspacing=1 width="100px">
+		<tr>
+			<th></th>
+			<th>Mata Pelajaran</th>
+		</tr>
+		 {% for pel in pelajaran %}
+            <tr>
+               <td>{{pel.id}}</td>
+               <td>{{pel.pelajaran}}</td>   
+               <td><input type="checkbox"></td>
+       		</tr>
+       	 {% endfor %}
+	</table>
+	
+	   <input type="submit">
+	   {% for pel in pelajaran %}
+           {% if checked %}
+           	{% endif%}
+       	 {% endfor %}
+       	 </input>
+{% endblock %}

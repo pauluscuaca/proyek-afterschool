@@ -1,0 +1,14 @@
+{% extends "adminBundle::layout.html.twig" %}
+
+{% block body %}
+<form action="{{ path('tambah_kelas') }}" method="POST">
+        {{ form_errors(form) }}
+
+        {{ form_row(form.Ruang) }}
+        {{ form_rest(form) }}
+        <input type="submit"/>
+    </form>
+
+    
+
+{% endblock %}

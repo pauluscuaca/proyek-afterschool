@@ -1,0 +1,11 @@
+murid_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: muridBundle:Default:index }
+
+profil:
+    pattern:  /profil
+    defaults: { _controller: muridBundle:murid:profil}
+
+pelajaran:
+    pattern:  /pelajaran
+    defaults: { _controller: muridBundle:pelajaran:datapelajaran }

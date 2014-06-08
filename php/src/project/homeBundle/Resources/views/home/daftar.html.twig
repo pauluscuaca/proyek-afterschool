@@ -1,0 +1,101 @@
+{%extends "homeBundle::layout.html.twig"%}
+
+{% block body %}
+    <!-- main content -->
+    <div id="content">
+      <article>
+        <br><font size="4" color="orange"> Daftar Sebagai siswa</font>
+
+{% block content %}
+
+
+
+{{ form_start(form) }}
+                {{ form_errors(form) }}
+
+                    <table>
+                    <tr>
+                    <td><b> {{ form_label(form.nama) }}</b> </td>
+                    <td> {{ form_errors(form.nama) }} </td>
+                    <Td> {{ form_widget(form.nama) }} </td>
+                    </tr>
+                    <tr>  
+                    <td><b>{{ form_label(form.JK) }}</b> </td>
+                    <td>{{ form_errors(form.JK) }} </td>
+                    <td>{{ form_widget(form.JK) }}  </td> 
+                   </tr>
+                   <tr>
+                    <td><b>{{ form_label(form.tgl_lahir) }}</b></td>
+                    <td>{{ form_errors(form.tgl_lahir) }}</td>
+                    <td>{{ form_widget(form.tgl_lahir) }}</td>
+                    </tr>
+                    <tr>
+                    <td><b>{{ form_label(form.Alamat) }} </b></td>
+                    <td>{{ form_errors(form.Alamat) }} </td>
+                    <td>{{ form_widget(form.Alamat) }} </td>
+                    </tr>              
+                    <tr>               
+                    <td><b>{{ form_label(form.username) }}</b> </td>
+                    <td>{{ form_errors(form.username) }} </td>
+                    <td>{{ form_widget(form.username) }} </td>
+                    </tr>
+                    <tr>
+                    <td><b>{{ form_label(form.password) }}</b></td>
+                    <td>{{ form_errors(form.password) }}</td>
+                    <td>{{ form_widget(form.password) }}</td>          
+                    </tr>
+                    <tr>
+                    <td><b>{{ form_label(form.email) }}</b></td>
+                    <td>{{ form_errors(form.email) }}</td>
+                    <td>{{ form_widget(form.email) }}</td>
+                    </tr>
+                    <tr>
+                    <td><b>{{ form_label(form.tingkat) }}</b></td>
+                    <td>{{ form_errors(form.tingkat) }}</td>
+                    <td>{{ form_widget(form.tingkat) }}</td>
+                    </tr>
+                    <tr>
+                    <td><b>{{ form_label(form.namasekolah) }}</b></td>
+                    <td>{{ form_errors(form.namasekolah) }}</td>
+                    <td>{{ form_widget(form.namasekolah) }}</td>
+                    </tr>
+                    <tr>
+                    <td><b>{{ form_label(form.agama) }}</b></td>
+                    <td>{{ form_errors(form.agama) }}</td>
+                    <td>{{ form_widget(form.agama) }}</td>
+                    </tr>
+                    <tr>
+                    <td><b>{{ form_label(form.warganegara) }}</b></td>
+                    <td>{{ form_errors(form.warganegara) }}</td>
+                    <td>{{ form_widget(form.warganegara) }}</td>
+                    </tr>
+                    <tr>
+                    <td><b>{{ form_label(form.Telepon) }}</b></td>
+                    <td>{{ form_errors(form.Telepon) }}</td>
+                    <td>{{ form_widget(form.Telepon) }}</td>
+                    </tr>
+                    <tr>
+                    <td> {{ form_widget(form.save) }} &nbsp; <button onclick="window.history.go(-1)">Back</button> </td>
+                    </tr>
+                    
+                    
+                    
+                    </table>
+            {{ form_widget(form._token) }}
+          {{ form_end(form) }}
+{% endblock %}
+</article>
+    </div>
+    <!-- / content body -->
+  </div>
+</div>
+<!-- footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">After SCHOOL</a></p>
+    
+  </footer>
+</div>
+{% endblock %}
+
+ 

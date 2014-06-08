@@ -1,0 +1,49 @@
+<html>
+<head>
+	{% block head %}
+	<link rel="stylesheet" href="{{ asset('bundles/admin/css/all.css') }}" />
+	{% endblock %}
+    {% block title %}
+
+    {% endblock %}
+</head>
+<body>
+ 	 <div id="main">
+  <div id="header"> <font size="24" color="gray"> After SCHOOL </font>
+<ul id="top-navigation">
+      <li><span><span><a href={{path('data_admin')}}>Data Admin</a></span></span></li>
+      <li><span><span><a href={{path('data_pendaftar')}}>Data Pendaftar</a></span></span></li>
+      <li><span><span><a href={{path('data_murid')}}>Data Murid</a></span></span></li>
+      <li><span><span><a href="">jadwal</a></span></span></li>
+      <li><span><span><a href="{{path('data_kelas')}}">Kelas</a></span></span></li>
+      <li><span><span><a href="{{path('data_pelajaran')}}">Pelajaran</span></span></li>
+      <li><span><span><a href="{{ path('fos_user_security_logout') }}"> {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a></span></span></li>
+    </ul>
+    
+  </div>
+  
+  <div id="middle">
+ <div id="center-column">
+      <div class="top-bar">
+        <h1>Welcome, Administrator !</h1>
+       <h2> Silahkan pilih menu disebelah atas untuk melanjutkan... </h2>
+      </div>
+      <br />
+      <div class="select-bar">
+        <label>
+        <input type="text" name="textfield" />
+        </label>
+
+        <label>
+        <input type="submit" name="Submit" value="Search" />
+        </label>
+      </div>
+    {% block body %}
+
+
+	{% endblock %}
+</body>
+</html>
+
+
+

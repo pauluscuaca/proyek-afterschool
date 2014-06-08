@@ -1,0 +1,25 @@
+{% extends "adminBundle::layout.html.twig" %}
+
+{% block body %}
+<button><a href={{path('tambah_kelas')}}>Tambah kelas</a></button>
+
+	<table class="listing" border=1 cellpadding=0 cellspacing=1 width="100px">
+
+		<tr>
+			<th class="first" width="177"><center>Kode kelas</center></th>
+			<th>Ruang</th>
+			<th colspan="2" class="last">Action </th>
+		</tr>
+		 {% for ruang in datakelas %}
+					 	<tr>
+			               <td>{{ruang.id}}</td>
+			               <td>{{ruang.ruang}}
+			               <td><a href="{{path('edit_kelas',{'kode_ruang': ruang.Id})}}"><img src="{{ asset('bundles/admin/images/edit.png')}}"></a></td>
+			               <td><a href="{{path('delete_kelas',{'kode_ruang': ruang.Id})}}"><img src="{{ asset('bundles/admin/images/delete.png')}}"></a></td>
+						   
+						   
+						 </tr>
+
+       	 {% endfor %}
+	</table>
+{% endblock %}

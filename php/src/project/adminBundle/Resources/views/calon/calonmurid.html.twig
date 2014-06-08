@@ -1,0 +1,31 @@
+{% extends "adminBundle::layout.html.twig" %}
+
+{% block body %}
+
+ 	 <div class="table">
+   
+	<table class="listing" border=1 cellpadding=0 cellspacing=0>
+		<tr>
+			<th class="first" width="177">id</th>
+			<th>nama</th>
+			<th>JK</th>
+			<th>Telepon</th>
+			<th>tgl_lahir</th>
+			<th class="last">Alamat</th>
+		</tr>
+		 {% for admin in admin %}
+		 	{% if admin!= null %}
+            <tr>
+               <td>{{admin.id}}</td>
+               <td>{{admin.nama}}</td>
+               <td>{{admin.JK}}</td>
+               <td>{{admin.Telepon}}</td>
+               <td>{{admin.TglLahir|date('Y-m-d')}}</td>  
+               <td>{{admin.Alamat}}</td>      
+               <td><a href="{{path('delete_admin',{'id_admin': admin.Id, 'func':'delete' })}}">delete</a></td>
+			   <td><a href="{{path('edit_admin',{'id_admin': admin.Id, 'func':'edit' })}}">edit</a></td>
+       		</tr>
+       		{% endif %}
+       	 {% endfor %}
+	</table>
+	{% endblock %}

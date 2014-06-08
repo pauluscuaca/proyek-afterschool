@@ -1,0 +1,26 @@
+{% extends "adminBundle::layout.html.twig" %}
+
+{% block body %}
+<button><a href={{path('tambah_pelajaran')}}>Tambah Pelajaran</a></button>
+
+	<table class="listing" border=1 cellpadding=0 cellspacing=1 width="100px">
+
+		<tr>
+			<th class="first" width="177">Kode Pelajaran</th>
+			<th> nama Pelajaran</th>
+			<th colspan="2" class="last">Action</th>
+			
+		</tr>
+		 {% for pel in datapelajaran %}
+					 	<tr>
+			               <td>{{pel.id}}</td>
+			               <td>{{pel.pelajaran}}
+			               <td><a href="{{path('edit_pelajaran',{'kode_pel': pel.Id})}}"><img src="{{ asset('bundles/admin/images/edit.png')}}"></a></td> 
+			               <td><a href="{{path('delete_pelajaran',{'kode_pel': pel.Id})}}"><img src="{{ asset('bundles/admin/images/delete.png')}}"></a></td>
+						  
+						   
+						 </tr>
+
+       	 {% endfor %}
+	</table>
+{% endblock %}
